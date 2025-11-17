@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="dashboard">
+  <div class="background"></div>
+  <div class="dashboard">
 
-        <!-- Clock -->
-        <div class="card" id="clock-card">
-            <h2>Clock</h2>
-            <div id="clock"></div>
-        </div>
+    <!-- Clock -->
+    <section>
+      <h2>Clock</h2>
+      <div id="clock"></div>
+    </section>
 
-        <!-- Weather -->
-        <div class="card" id="weather-card">
-            <h2>Weather</h2>
-            <div id="weather">Loading...</div>
-        </div>
+    <!-- Weather -->
+    <section>
+      <h2>Weather</h2>
+      <iframe
+        src="https://wttr.in/?format=3"
+        class="weather"
+      ></iframe>
+    </section>
 
-        <!-- Calendar -->
-        <div class="card" id="calendar-card">
-            <h2>Calendar</h2>
-<iframe 
-  src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showPrint=0&showTz=0&mode=MONTH&src=ZGFuaWVsYW5kZXJzb24yMDE3MTlAZ21haWwuY29t&src=ZmFtaWx5MDc2Mzk2NDQwMDg1MTg4NzU5MTNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=MWEwZmYyZDVhOTUzYTliMTYxMzQwMGQ0NDhmZmY4MDM2NzBjMjM4NjU1OTllZDAxNzM5OGFlYTZiMmI3OWJlZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=en.christian%23holiday%40group.v.calendar.google.com&src=en.usa%23holiday%40group.v.calendar.google.com&src=ht3jlfaac5lfd6263ulfh4tql8%40group.calendar.google.com"
-  style="border:solid 1px #777" 
-  width="100%" 
-  height="600" 
-  frameborder="0" 
-  scrolling="no">
-</iframe>
-        </div>
+    <!-- Calendar (UPDATED w/ multiple calendars combined) -->
+    <section>
+      <h2>Calendar</h2>
+      <iframe 
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&showPrint=0&showTz=0&mode=MONTH&src=ZGFuaWVsYW5kZXJzb24yMDE3MTlAZ21haWwuY29t&src=ZmFtaWx5MDc2Mzk2NDQwMDg1MTg4NzU5MTNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=MWEwZmYyZDVhOTUzYTliMTYxMzQwMGQ0NDhmZmY4MDM2NzBjMjM4NjU1OTllZDAxNzM5OGFlYTZiMmI3OWJlZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=en.christian%23holiday%40group.v.calendar.google.com&src=en.usa%23holiday%40group.v.calendar.google.com&src=ht3jlfaac5lfd6263ulfh4tql8%40group.calendar.google.com"
+        style="border:solid 1px #777"
+        width="100%" 
+        height="600"
+        frameborder="0"
+        scrolling="no">
+      </iframe>
+    </section>
 
-        <!-- Streaming Shortcuts -->
-        <div class="card" id="streaming-card">
-            <h2>Streaming</h2>
-            <div class="links">
-                <a href="https://tubitv.com" target="_blank">Tubi</a>
-                <a href="https://app.plex.tv" target="_blank">Plex</a>
-                <a href="https://pluto.tv" target="_blank">Pluto TV</a>
-                <a href="https://www.vudu.com" target="_blank">Vudu</a>
-            </div>
-        </div>
+    <!-- News -->
+    <section>
+      <h2>News</h2>
+      <div class="iframe-row">
+        <iframe src="https://koamnewsnow.com/" class="embed"></iframe>
+        <iframe src="https://fourstateshomepage.com/" class="embed"></iframe>
+      </div>
+    </section>
 
-        <!-- News -->
-        <div class="card" id="news-card">
-            <h2>News</h2>
-            <div class="links">
-                <a href="https://koamnewsnow.com/" target="_blank">KOAM News Now</a>
-                <a href="https://fourstateshomepage.com/" target="_blank">Four States Homepage</a>
-            </div>
-        </div>
+    <!-- Dictionaries -->
+    <section>
+      <h2>Reference</h2>
+      <div class="iframe-row">
+        <iframe src="https://www.merriam-webster.com/" class="embed"></iframe>
+        <iframe src="https://www.oed.com/" class="embed"></iframe>
+        <iframe src="https://www.urbandictionary.com/" class="embed"></iframe>
+      </div>
+    </section>
 
-        <!-- Reference / Dictionary Embeds -->
-        <div class="card" id="reference-card">
-            <h2>References</h2>
-            <div class="links">
-                <a href="https://www.merriam-webster.com/" target="_blank">Merriam-Webster</a>
-                <a href="https://www.oed.com/" target="_blank">OED</a>
-                <a href="https://www.urbandictionary.com/" target="_blank">Urban Dictionary</a>
-            </div>
-        </div>
+    <!-- Streaming -->
+    <section>
+      <h2>Streaming</h2>
+      <div class="links">
+        <a href="https://tubitv.com" target="_blank">Tubi</a>
+        <a href="https://app.plex.tv" target="_blank">Plex</a>
+        <a href="https://pluto.tv" target="_blank">Pluto TV</a>
+        <a href="https://www.vudu.com" target="_blank">Vudu</a>
+      </div>
+    </section>
 
-    </div>
-
-    <script src="script.js"></script>
+  </div>
 </body>
 </html>
