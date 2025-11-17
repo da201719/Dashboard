@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+
+        <!-- Clock -->
+        <div class="card" id="clock-card">
+            <h2>Clock</h2>
+            <div id="clock"></div>
+        </div>
+
+        <!-- Weather -->
+        <div class="card" id="weather-card">
+            <h2>Weather</h2>
+            <div id="weather">Loading...</div>
+        </div>
+
+        <!-- Calendar -->
+        <div class="card" id="calendar-card">
+            <h2>Calendar</h2>
+            <iframe src="https://calendar.google.com/calendar/embed?src=yourcalendarid%40group.calendar.google.com&ctz=America%2FChicago" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <!-- Streaming Shortcuts -->
+        <div class="card" id="streaming-card">
+            <h2>Streaming</h2>
+            <div class="links">
+                <a href="https://tubitv.com" target="_blank">Tubi</a>
+                <a href="https://app.plex.tv" target="_blank">Plex</a>
+                <a href="https://pluto.tv" target="_blank">Pluto TV</a>
+                <a href="https://www.vudu.com" target="_blank">Vudu</a>
+            </div>
+        </div>
+
+        <!-- News -->
+        <div class="card" id="news-card">
+            <h2>News</h2>
+            <div class="links">
+                <a href="https://koamnewsnow.com/" target="_blank">KOAM News Now</a>
+                <a href="https://fourstateshomepage.com/" target="_blank">Four States Homepage</a>
+            </div>
+        </div>
+
+        <!-- Reference / Dictionary Embeds -->
+        <div class="card" id="reference-card">
+            <h2>References</h2>
+            <div class="links">
+                <a href="https://www.merriam-webster.com/" target="_blank">Merriam-Webster</a>
+                <a href="https://www.oed.com/" target="_blank">OED</a>
+                <a href="https://www.urbandictionary.com/" target="_blank">Urban Dictionary</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
